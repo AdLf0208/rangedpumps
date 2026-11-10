@@ -1,0 +1,11 @@
+# Port-owned content mod for Ranged Pumps 1.3.0 (MIT, refinedmods/rangedpumps):
+# the pump block, its item, recipe, loot, models, textures and lang. The block
+# entity, tank and tick are the native half in ports/rangedpumps/mixins.
+id = "rangedpumps"
+name = "Ranged Pumps"
+version = "1.3.0"
+description = "A pump that drains liquids in a range"
+authors = ["Refined Mods"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

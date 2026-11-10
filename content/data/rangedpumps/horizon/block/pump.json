@@ -1,0 +1,10 @@
+{
+  "template": "minecraft:stone",
+  "properties": {
+    "hardness": 1.9,
+    "explosion_resistance": 1.9,
+    "requires_tool": false,
+    "sounds": "minecraft:stone"
+  },
+  "item": true
+}

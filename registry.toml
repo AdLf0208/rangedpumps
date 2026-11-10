@@ -1,0 +1,49 @@
+id = "rangedpumps"
+kind = "native-mod"
+name = "rangedpumps"
+summary = "A Horizon port of rangedpumps."
+description = """
+A port of [rangedpumps](refinedmods/rangedpumps) for Horizon.
+
+**Implemented so far**
+
+- The pure arithmetic is `runtime.rs`; the world work is `support.rs`.
+- Scan.** `range` starts at `-1` (the single column directly **below** the
+- pump); each later range is the **perimeter** of a `(2r+3)²` square, i.e. the
+- , 16, 24… block ring at horizontal distance `r+1`. Within a column the pump
+- goes down one block per **8 ticks** (upstream `speed`) to the dimension's
+- minimum Y, then starts the next column. The interior of a ring is not
+- scanned (upstream behaviour).
+- Drain.** Only `minecraft:water`/`minecraft:lava` with `level=0` (a still
+
+**Not yet ported**
+
+- Implemented: the pump block, per-block range setting, the scan, still-source
+- drain, the internal tank and its fluid capability, adjacent output, stone
+- replacement, the readout, commands, and the carried item/recipe/loot/lang/
+- models/textures.
+- No energy (FE) gating.** The pin has API 142, but this campaign has no FE
+- source and the slice brief permits energy as a gap; the pump runs as if
+- `useEnergy = false`.
+- No redstone pause.** A neighbour-signal read needs `LevelAccess`/`Ticks`,
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/rangedpumps"
+icon = "icons/rangedpumps.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "rangedpumps.hnmod"
+sha256 = "3b5ef70b409830a57b32969e5f36bc6d1344746124a82bf413f7d6273a91f405"
+changelog = "First release"
